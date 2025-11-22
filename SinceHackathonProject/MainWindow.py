@@ -1,6 +1,7 @@
 import sys
+from PyQt6.QtGui import QPalette
 from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QFileDialog, QVBoxLayout
-from PyQt6.QtCore import pyqtSlot, QUrl
+from PyQt6.QtCore import QSize, pyqtSlot, QUrl
 from PyQt6.QtCore import QStandardPaths
 import re
 import os
@@ -11,14 +12,18 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.selectedItem = ""
-        mainItems = QVBoxLayout()
+
         btnPdf = QPushButton(self)
         btnPdf.setText("Select PDF File")
         btnPdf.clicked.connect(self.open_dialog)
         self.dragDialog = DragDropArea.DragDropArea()
-
+        mainItems = QVBoxLayout()
+        mainItems.setContentsMargins(64, 16, 64, 16)
+        mainItems.addSpacing(5)
         mainItems.addWidget(btnPdf)
         mainItems.addWidget(self.dragDialog)
+        mainItems.addStretch()
+
         self.dragDialog.onItemDropped.connect(self.pdfDropped)
         itemWidget = QWidget()
         itemWidget.setLayout(mainItems)
