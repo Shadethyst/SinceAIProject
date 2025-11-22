@@ -1,29 +1,76 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QFileDialog, QVBoxLayout
-from PyQt6.QtCore import pyqtSlot, QUrl
+from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QFileDialog, QVBoxLayout, QLabel
+from PyQt6.QtCore import pyqtSlot, QUrl, Qt
 from PyQt6.QtCore import QStandardPaths
 import re
 import os
 import winreg
 import DragDropArea
+import create_excel
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.selectedItem = ""
+        self.start = True
+        self.resize(800, 700)
+        self.setWindowTitle("Since Hackathon Project")
+
         mainItems = QVBoxLayout()
         btnPdf = QPushButton(self)
-        btnPdf.setText("Select PDF File")
+        btnPdf.setFixedSize(120, 40)
+        btnPdf.setText("Open File Dialog")
         btnPdf.clicked.connect(self.open_dialog)
         self.dragDialog = DragDropArea.DragDropArea()
+        self.dragDialog.setMinimumHeight(150)
 
         mainItems.addWidget(btnPdf)
         mainItems.addWidget(self.dragDialog)
         self.dragDialog.onItemDropped.connect(self.pdfDropped)
+
+        self.continue_button = QPushButton("Continue")
+        self.continue_button.setFixedSize(120, 40)
+        self.continue_button.setEnabled(False)
+        self.continue_button.clicked.connect(self.show_completed_view)
+        mainItems.addWidget(self.continue_button)
+
         itemWidget = QWidget()
         itemWidget.setLayout(mainItems)
-        
         self.setCentralWidget(itemWidget)
+
+    def show_completed_view(self):
+
+        excel_button = QPushButton("Save Excel File")
+        excel_button.setFixedSize(120, 40)
+
+        row = QWidget()
+        row_layout = QVBoxLayout()
+        row_layout.setSpacing(20)
+
+        label = QLabel("Calculation completed successfully. Click the button to save the Excel file.")
+        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        row_layout.addWidget(label)
+
+        row_layout.addWidget(excel_button, 0, Qt.AlignmentFlag.AlignHCenter)
+        row.setLayout(row_layout)
+
+        def on_create_clicked():
+            filename, _ = QFileDialog.getSaveFileName(self, "Save Excel File", f"Laskentatiedosto", "Excel Files (*.xlsx)")
+            if filename:
+                create_excel.create_excel(name=filename)
+                QApplication.instance().quit()
+
+        excel_button.clicked.connect(on_create_clicked)
+
+        container = QWidget()
+        layout = QVBoxLayout()
+        layout.addStretch()
+        layout.addWidget(row, 0, Qt.AlignmentFlag.AlignCenter)
+        layout.addStretch()
+        container.setLayout(layout)
+
+        self.setCentralWidget(container)
+            
     @pyqtSlot()
     def open_dialog(self):
         #fname = QFileDialog.getOpenFileName(
@@ -52,14 +99,19 @@ class MainWindow(QMainWindow):
         if fUrl[0].toString().endswith(".pdf"):
             self.selectedItem = fUrl[0].toString()
             self.dragDialog.setText(fUrl[0].toString())
+            try:
+                self.continue_button.setEnabled(True)
+            except Exception:
+                pass
         else:
             self.dragDialog.setText("File not PDF")
             
     def pdfDropped(self):
         self.selectedItem = self.dragDialog.itemUrl
         print(self.selectedItem)
+        try:
+            self.continue_button.setEnabled(True)
+        except Exception:
+            pass
     pass
-
-
-
 
