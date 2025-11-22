@@ -2,6 +2,8 @@ from PyQt6.QtWidgets import QLineEdit
 from PyQt6.QtCore import pyqtSignal
 import sys
 
+#class for dragging and dropping pdf files for processing
+#checks if the file is a .pdf file and either sets the file currently chosen file or tells the user that the file they selected was not a pdf file
 class DragDropArea(QLineEdit):
     onItemDropped = pyqtSignal(str)
     def __init__(self):

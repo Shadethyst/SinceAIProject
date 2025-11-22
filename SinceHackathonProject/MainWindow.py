@@ -13,7 +13,7 @@ class MainWindow(QMainWindow):
         self.selectedItem = ""
         mainItems = QVBoxLayout()
         btnPdf = QPushButton(self)
-        btnPdf.setText("Open File Dialog")
+        btnPdf.setText("Select PDF File")
         btnPdf.clicked.connect(self.open_dialog)
         self.dragDialog = DragDropArea.DragDropArea()
 
@@ -32,19 +32,21 @@ class MainWindow(QMainWindow):
         #    "${HOME}",
         #    "PDF Files(*.pdf);; All Files(*)",
         #    )
-        reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders")
+        #reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders")
         
-        downloads_path = winreg.QueryValueEx(reg_key, "{374DE290-123F-4565-9164-39C4925E467B}")[0]
+        #downloads_path = winreg.QueryValueEx(reg_key, "{374DE290-123F-4565-9164-39C4925E467B}")[0]
         
-        winreg.CloseKey(reg_key)      
+        #winreg.CloseKey(reg_key)      
+        workingdirectory = os.getcwd()
         fUrl = QFileDialog.getOpenFileUrl(
             self,
-            "Open File",
-            QUrl(downloads_path),
+            "Select File",
+            #QUrl(downloads_path),
+            QUrl(workingdirectory),
             "PDF Files(*.pdf);; All Files(*)",
             )
 #        print(fname)
-        print(downloads_path)
+        #print(downloads_path)
         print(fUrl[0].toString())
         
         if fUrl[0].toString().endswith(".pdf"):
