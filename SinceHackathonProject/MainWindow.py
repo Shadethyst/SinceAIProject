@@ -99,8 +99,10 @@ class MainWindow(QMainWindow):
         print(fUrl[0].toString())
         
         if fUrl[0].toString().endswith(".pdf"):
-            self.selectedItem = fUrl[0].toString()
-            self.dragDialog.setText(fUrl[0].toString())
+            currentUrl = fUrl[0].toString()
+            currentUrl = currentUrl[8:]
+            self.selectedItem = currentUrl
+            self.dragDialog.setText(currentUrl)
             try:
                 self.continue_button.setEnabled(True)
             except Exception:
@@ -109,7 +111,7 @@ class MainWindow(QMainWindow):
             self.dragDialog.setText("File not PDF")
             
     def pdfDropped(self):
-        self.selectedItem = self.dragDialog.itemUrl
+        self.selectedItem = self.dragDialog.itemUrl[8:]
         print(self.selectedItem)
         try:
             self.continue_button.setEnabled(True)
