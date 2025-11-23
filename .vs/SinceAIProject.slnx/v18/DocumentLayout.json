@@ -3,24 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\TemplateMatch.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|solutionrelative:SinceHackathonProject\\TemplateMatch.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|SinceHackathonProject||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\MainWindow.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|solutionrelative:SinceHackathonProject\\MainWindow.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\katja\\source\\repos\\SinceAIProject\\eisko_crop.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eisko_crop.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\DragDropArea.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|solutionrelative:SinceHackathonProject\\DragDropArea.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\SinceHackathonProject.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|solutionrelative:SinceHackathonProject\\SinceHackathonProject.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\create_excel.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SinceHackathonProject\\create_excel.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\katja\\source\\repos\\SinceAIProject\\eisko_crop.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eisko_crop.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\DragDropArea.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2291AFF3-ACD5-4298-80AE-714DF0D2FA94}|SinceHackathonProject\\SinceHackathonProject.pyproj|solutionrelative:SinceHackathonProject\\DragDropArea.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\create_excel.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SinceHackathonProject\\create_excel.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +37,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,20 +45,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "TemplateMatch.py",
+              "DocumentMoniker": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\TemplateMatch.py",
+              "RelativeDocumentMoniker": "SinceHackathonProject\\TemplateMatch.py",
+              "ToolTip": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\TemplateMatch.py",
+              "RelativeToolTip": "SinceHackathonProject\\TemplateMatch.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-11-22T18:10:55.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "eisko_crop.py",
               "DocumentMoniker": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\eisko_crop.py",
               "RelativeDocumentMoniker": "eisko_crop.py",
               "ToolTip": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\eisko_crop.py",
               "RelativeToolTip": "eisko_crop.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAHoAAAAZAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
-              "WhenOpened": "2025-11-22T15:40:23.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T15:40:23.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "create_excel.py",
               "DocumentMoniker": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\create_excel.py",
               "RelativeDocumentMoniker": "SinceHackathonProject\\create_excel.py",
@@ -59,25 +78,34 @@
               "RelativeToolTip": "SinceHackathonProject\\create_excel.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
-              "WhenOpened": "2025-11-22T15:16:24.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T15:16:24.985Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "SinceHackathonProject",
+              "DocumentMoniker": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\SinceHackathonProject.pyproj",
+              "RelativeDocumentMoniker": "SinceHackathonProject\\SinceHackathonProject.pyproj",
+              "ToolTip": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\SinceHackathonProject.pyproj",
+              "RelativeToolTip": "SinceHackathonProject\\SinceHackathonProject.pyproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-22T18:03:15.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.py",
               "DocumentMoniker": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\MainWindow.py",
               "RelativeDocumentMoniker": "SinceHackathonProject\\MainWindow.py",
               "ToolTip": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\MainWindow.py",
               "RelativeToolTip": "SinceHackathonProject\\MainWindow.py",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAGYAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
-              "WhenOpened": "2025-11-22T13:51:55.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T13:51:55.286Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "DragDropArea.py",
               "DocumentMoniker": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\DragDropArea.py",
               "RelativeDocumentMoniker": "SinceHackathonProject\\DragDropArea.py",
@@ -85,12 +113,11 @@
               "RelativeToolTip": "SinceHackathonProject\\DragDropArea.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
-              "WhenOpened": "2025-11-22T13:51:47.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T13:51:47.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SinceHackathonProject.py",
               "DocumentMoniker": "C:\\Users\\katja\\source\\repos\\SinceAIProject\\SinceHackathonProject\\SinceHackathonProject.py",
               "RelativeDocumentMoniker": "SinceHackathonProject\\SinceHackathonProject.py",
@@ -98,8 +125,7 @@
               "RelativeToolTip": "SinceHackathonProject\\SinceHackathonProject.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHeSURBVDhPpVMxa1NRFP7ebZLSlgaltNpSVCySRUxL0NAh4FJpHWpxcZAUBEPG/AKHDsVBN5eGrCnoYKCDoDiUCKKBjtZBUZtJ2ojYJr40ue\u002B\u002B47k3VzD0hQr94OOed8853/k47z2cCETk2NAgk8mQDQMhhFjK5/Mb9vEotIDruoEsFovEzVvZbPaWLTcQ9uxCpVLp4l\u002Bk0\u002BlEPB5/wIPm7RVC9uxCMpm0UTdKpRKi0WiCQy3wUt8FCvw7VSNxbRapG4voDwucGgyjXC7bzH84ePt1HysbH/GhWoNstzA1OoSFhZuxQqFg8sfu4FutAd\u002BT8KSEYm7v7GJ0YnLClgYLaAcjU9N4Vx9Dda8OBz7OjwywSNsIXY39vEL7TxWpxv2eO3hWHUZ19xc8ti25UdvXzdpNWH0BDj8JiLOrPXfweOu9mRgRhOXUEPr7IiBfYeacB9HaBNRvQH4f6\u002BlgMERwGxJP7grEoq9shj9Uz\u002BVGpmIi4vXcwdzlcePgzLAuZPiSGw869Jg\u002Biw1Mvw50oLGcuoh71y8h1HwB1Js8UfFLnwScNnBhdYVLWsy1IwK5XM5GHaw9uu0LeSCMddZA32lz7zjOQxMcByK1SPU3O/Rjnai2fkjNz8/5L77TyQJ/AJc67LNf3QeWAAAAAElFTkSuQmCC",
-              "WhenOpened": "2025-11-22T13:34:25.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T13:34:25.359Z"
             }
           ]
         }

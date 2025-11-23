@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>SinceHackathonProject</Name>
     <RootNamespace>SinceHackathonProject</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,6 +25,7 @@
     <Compile Include="DragDropArea.py" />
     <Compile Include="MainWindow.py" />
     <Compile Include="SinceHackathonProject.py" />
+    <Compile Include="TemplateMatch.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

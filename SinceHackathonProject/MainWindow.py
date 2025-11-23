@@ -1,6 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QFileDialog, QVBoxLayout, QLabel
-from PyQt6.QtCore import pyqtSlot, QUrl, Qt
+from PyQt6.QtCore import pyqtSlot, QUrl, Qt, pyqtSignal
 from PyQt6.QtCore import QStandardPaths
 import re
 import os
@@ -10,12 +10,14 @@ import create_excel
 
 class MainWindow(QMainWindow):
     def __init__(self):
+         
         super().__init__()
         self.selectedItem = ""
         self.start = True
         self.resize(800, 700)
         self.setWindowTitle("Since Hackathon Project")
 
+        self.onContinue = pyqtSignal(str)
         mainItems = QVBoxLayout()
         btnPdf = QPushButton(self)
         btnPdf.setFixedSize(120, 40)
@@ -39,9 +41,10 @@ class MainWindow(QMainWindow):
         itemWidget = QWidget()
         itemWidget.setLayout(mainItems)
         self.setCentralWidget(itemWidget)
-
+    @pyqtSlot
     def show_completed_view(self):
 
+        self.onContinue.emit(self.selectedItem)
         excel_button = QPushButton("Save Excel File")
         excel_button.setFixedSize(120, 40)
 
