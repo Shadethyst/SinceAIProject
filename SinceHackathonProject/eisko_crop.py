@@ -9,9 +9,9 @@ from PyQt6.QtCore import pyqtSlot
 
 
 class eisko_crop():
-    def __init__():
-        super.__init__()
-            
+    def __init__(self):
+        pass
+
     def crop_eisko(img):
         print("running crop_eisko")
         # Convert PIL Image to NumPy array for OpenCV operations.
@@ -87,11 +87,11 @@ class eisko_crop():
                         if y2 > alaraja:
                             alaraja = y2
         cropped_image = img.crop((vasenraja, alaraja, oikearaja, ylaraja))
-
+        print("eisko_crop returning cropped")
         return cropped_image
 
 
-    def callOnContinue(path):
+    def callOnContinue(self, path):
         # The path to PDF file:
         print("running callOnCreate")
         pdf_file_path = path
