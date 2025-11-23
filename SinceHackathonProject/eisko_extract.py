@@ -7,7 +7,116 @@ Original file is located at
     https://colab.research.google.com/drive/1hHTGVsLrGTxrY_mDHsaZFxV3K42ydBrp
 """
 
-# Removing lines
+def crop_eisko(img):
+
+  # Convert PIL Image to NumPy array for OpenCV operations.
+  # PIL Image.open loads images in RGB format by default.
+  img_np_rgb = np.array(img)
+
+  # Convert to grayscale
+  # Since img_np_rgb is RGB, convert from RGB to GRAY.
+  test_img_gray = cv2.cvtColor(img_np_rgb, cv2.COLOR_RGB2GRAY)
+
+  # Step 1: Apply edge detection (Canny Edge)
+  edges = cv2.Canny(test_img_gray, 50, 150)
+
+  # Step 2: Detect lines using Hough Line Transform
+  lines = cv2.HoughLinesP(edges, 1, np.pi / 180, 100, minLineLength=350, maxLineGap=10)
+
+  # Step 3: Filter out vertical lines (lines with nearly vertical slope)
+  vertical_lines = []
+  coord_vertical_lines = []
+  coord_horizontal_lines = []
+  if lines is not None: # It's good practice to check if lines were found
+      for line_coords in lines:
+          x1, y1, x2, y2 = line_coords[0]
+          # A vertical line should have x1 close to x2.
+          # The condition abs(x2 - x1) < 10 checks for vertical lines.
+          if abs(x2 - x1) < 10:
+              vertical_lines.append((x1, y1, x2, y2))
+              coord_vertical_lines.append((x1, y1, x2, y2))
+          else :
+              coord_horizontal_lines.append((x1, y1, x2, y2))
+
+  # Step 4: Check for lines that are close together
+  close_lines = []
+  threshold = 30
+  threshold2 = 10
+  for i in range(len(vertical_lines)-1):
+      for j in range(i + 2, len(vertical_lines)):
+          x1_a, _, y1_a, _ = vertical_lines[i] # Get x-coordinate of the first line
+          x1_b, _, y1_b, y2_b = vertical_lines[j] # Get x-coordinate of the second line
+          if (y1_a - y2_b) < 0:
+            if abs(x1_a - x1_b) < threshold: # Compare x-coordinates of the lines
+              if abs(x1_a - x1_b) > threshold2: # Compare x-coordinates of the lines
+                  close_lines.append((vertical_lines[i], vertical_lines[j]))
+
+  # Find the edges of the croppee area
+  alkupiste_hor = close_lines[0][0][0]
+  alkupiste_ver = close_lines[0][0][1]
+  loppupiste_hor = close_lines[0][0][2]
+  loppupiste_ver = close_lines[0][0][3]
+  ylaraja = img.size[1]
+  alaraja = 0
+  vasenraja = 0
+  oikearaja = img.size[0]
+  paatepisteet = (alkupiste_hor, alkupiste_ver, loppupiste_hor, loppupiste_ver)
+  # Find the line above and below the first close line
+  if lines is not None: # It's good practice to check if lines were found
+      for line_coords in lines:
+          x1, y1, x2, y2 = line_coords[0]
+          # A vertical line should have x1 close to x2.
+          # The condition abs(x2 - x1) < 10 checks for vertical lines.
+          if abs(x2 - x1) < 10:
+              if x1 < alkupiste_hor: # vasen puoli
+                if x1 > vasenraja:
+                    vasenraja = x1
+              if x1 > (loppupiste_hor + 100): # oikea puoli
+                if x1 < oikearaja:
+                    oikearaja = x1
+          else : # Line is horizontal
+              if y1 > alkupiste_ver:
+                if y1 < ylaraja:
+                  ylaraja = y1
+              if y2 < loppupiste_ver:
+                if y2 > alaraja:
+                  alaraja = y2
+  cropped_image = img.crop((vasenraja, alaraja, oikearaja, ylaraja))
+
+  return cropped_image
+
+from google.colab import drive
+# Mount Google Drive to access files
+drive.mount('/content/drive')
+
+!pip install pdf2image
+
+# Install poppler-utils for pdf2image to function correctly
+!apt-get install poppler-utils
+
+# import module
+from pdf2image import convert_from_path
+from PIL import Image, ImageEnhance
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+# The path to PDF file from Google Drive is:
+pdf_file_path = "/content/drive/MyDrive/Copy of Laskentatiedosto_Kisälli PK-KK 31.1.2025.pdf"
+
+# Store Pdf with convert_from_path function
+images = convert_from_path(pdf_file_path)
+
+for i in range(len(images)):
+      # Save pages as images in the pdf
+    images[i].save('page'+ str(i) +'.jpg', 'JPEG')
+
+img = Image.open(str(f"page{2}.jpg"))
+cropped = crop_eisko(img)
+
+## Tämän yläpuolella notebook tarvittavaa koodia ##
+
+#### REMOVING LINES ####
 
 import cv2
 import numpy as np
@@ -36,7 +145,11 @@ if lines is not None:
         # Draw white line to "erase" the detected lines
         cv2.line(img_symbols, (x1, y1), (x2, y2), (255, 255, 255), 2)
 
-# Bounding boxes: Clustering
+
+### OUTPUT  img_symbols
+#### END  OF LINE REMOVE ###
+
+#### Bounding boxes: Clustering  #####
 
 import cv2
 import numpy as np
@@ -114,6 +227,11 @@ for label in unique_labels:
         # Draw the bounding box around the cluster of contours on the image
         cv2.rectangle(img_with_boxes, (min_x, min_y), (max_x, max_y), (0, 255, 0), 2)  # Green rectangle
 
+
+## OUTPUT: bounding_boxes
+### END OF CLUSTERS ###
+
+
 # Output the bounding boxes list
 print("Bounding Boxes:", bounding_boxes)
 
@@ -123,7 +241,7 @@ plt.imshow(cv2.cvtColor(img_with_boxes, cv2.COLOR_BGR2RGB))  # Convert BGR to RG
 plt.axis('off')
 plt.show()
 
-# Bounding boxes: Merging
+###  Bounding boxes: MERGE ####
 
 #  Function to merge overlapping or touching bounding boxes
 def merge_bounding_boxes(bboxes, prox_threshold):
@@ -175,12 +293,17 @@ def merge_bounding_boxes(bboxes, prox_threshold):
         merged_boxes.append((x1, y1, w1, h1))
 
     return merged_boxes
+## END OF THE FUNCTION BUT NOT WHOLE END ###
 
 # Merge overlapping bounding boxes
 merged_bboxes = merge_bounding_boxes(bounding_boxes, prox_threshold=10)
 merged_bboxes = merge_bounding_boxes(merged_bboxes, prox_threshold=20)
 merged_bboxes = merge_bounding_boxes(merged_bboxes, prox_threshold=20)
 
+## OUTPUT merged_bboxes
+### END OF MERGING ####
+
+## REST NOTEBOOK FLUFF HERE ##
 # Output the merged bounding boxes
 print("Merged Bounding Boxes:", merged_bboxes)
 
