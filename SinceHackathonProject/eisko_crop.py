@@ -14,7 +14,6 @@ class eisko_crop():
 
     #currently assumes that the images are in vertical orientation - horizontal results in OOB error
     def crop_eisko(img):
-        print("running crop_eisko")
         # Convert PIL Image to NumPy array for OpenCV operations.
         # PIL Image.open loads images in RGB format by default.
         img_np_rgb = np.array(img)
@@ -88,7 +87,6 @@ class eisko_crop():
                         if y2 > alaraja:
                             alaraja = y2
         cropped_image = img.crop((vasenraja, alaraja, oikearaja, ylaraja))
-        print("eisko_crop returning cropped")
         return cropped_image
 
 
@@ -97,11 +95,16 @@ class eisko_crop():
         print("running callOnCreate")
         pdf_file_path = path
         images = convert_from_path(pdf_file_path)
-        for i in range(len(images)):
+        croppedimgs = []
+        for i in range(len(images) - 1):
             # Save pages as images in the pdf
             images[i].save('page'+ str(i) +'.jpg', 'JPEG')
-
-        img = Image.open(str(f"page{1}.jpg"))
-        cropped = eisko_crop.crop_eisko(img)
+            img = Image.open(str(f"page{i + 1}.jpg"))
+            print(f"Cropping page {i + 1}")
+            cropped = eisko_crop.crop_eisko(img)
+            croppedimgs.append(cropped)
+        return croppedimgs
+        
+        
 
     #move rest of clustering functions from eisko_extract
