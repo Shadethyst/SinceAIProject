@@ -50,7 +50,7 @@ def create_excel(name="Laskentatiedosto", data=example_data, missing=None):
         title_cell.font = Font(bold=True, size=12)
         ws.cell(row=start_row, column=2, value=missing)
     
-    filename = f"{name}.xlsx"
+    filename = f"{name}"
     
     wb.save(filename)
     print(f"Excel file created successfully: {filename}")

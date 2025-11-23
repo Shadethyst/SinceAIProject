@@ -1,6 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QFileDialog, QVBoxLayout, QLabel
-from PyQt6.QtCore import pyqtSlot, QUrl, Qt, pyqtSignal
+from PyQt6.QtCore import pyqtSlot, QUrl, Qt, QTimer
 from PyQt6.QtCore import QStandardPaths
 import re
 import os
@@ -13,12 +13,18 @@ class MainWindow(QMainWindow):
          
         super().__init__()
         self.selectedItem = ""
-        self.start = True
-        self.resize(800, 700)
+        self.resize(600, 300)
         self.setWindowTitle("Since Hackathon Project")
 
         self.onContinue = pyqtSignal(str)
         mainItems = QVBoxLayout()
+
+        top_text_default = "Drag and drop a PDF file or use the button to select one."
+        self.top_label = QLabel(top_text_default)
+        self.top_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.top_label.setFixedHeight(40)
+        mainItems.addWidget(self.top_label)
+
         btnPdf = QPushButton(self)
         btnPdf.setFixedSize(120, 40)
         btnPdf.setText("Open File Dialog")
@@ -41,7 +47,8 @@ class MainWindow(QMainWindow):
         itemWidget = QWidget()
         itemWidget.setLayout(mainItems)
         self.setCentralWidget(itemWidget)
-    @pyqtSlot
+        self.startWidget = itemWidget
+
     def show_completed_view(self):
 
         self.onContinue.emit(self.selectedItem)
@@ -62,8 +69,8 @@ class MainWindow(QMainWindow):
         def on_create_clicked():
             filename, _ = QFileDialog.getSaveFileName(self, "Save Excel File", f"Laskentatiedosto", "Excel Files (*.xlsx)")
             if filename:
-                create_excel.create_excel(name=filename)
-                QApplication.instance().quit()
+                create_excel(name=filename)
+                QTimer.singleShot(100, self.reset_to_start)
 
         excel_button.clicked.connect(on_create_clicked)
 
@@ -74,18 +81,38 @@ class MainWindow(QMainWindow):
         layout.addStretch()
         container.setLayout(layout)
 
+        try: 
+            old = self.takeCentralWidget()
+            if old is not None:
+                self.startWidget = old
+        except Exception:
+            pass
+
         self.setCentralWidget(container)
             
     @pyqtSlot()
     def open_dialog(self):
+        #fname = QFileDialog.getOpenFileName(
+        #    self,
+        #    "Open File",
+        #    "${HOME}",
+        #    "PDF Files(*.pdf);; All Files(*)",
+        #    )
+        #reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders")
+        
+        #downloads_path = winreg.QueryValueEx(reg_key, "{374DE290-123F-4565-9164-39C4925E467B}")[0]
+        
+        #winreg.CloseKey(reg_key)      
         workingdirectory = os.getcwd()
         fUrl = QFileDialog.getOpenFileUrl(
             self,
             "Select File",
+            #QUrl(downloads_path),
             QUrl(workingdirectory),
             "PDF Files(*.pdf);; All Files(*)",
             )
-
+#        print(fname)
+        #print(downloads_path)
         print(fUrl[0].toString())
         
         if fUrl[0].toString().endswith(".pdf"):
@@ -109,3 +136,16 @@ class MainWindow(QMainWindow):
             pass
     pass
 
+    def reset_to_start(self):
+
+        self.selectedItem = ""
+        self.top_label.setText("Excel file created successfully.")
+        
+        try:
+            self.dragDialog.setText("")
+            self.continue_button.setEnabled(False)
+            self.setCentralWidget(self.startWidget)
+
+        except Exception as e:
+            print(e)
+            pass
