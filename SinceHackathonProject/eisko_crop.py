@@ -9,6 +9,8 @@ from PyQt6.QtCore import pyqtSlot
 
 
 class eisko_crop():
+    def __init__():
+        super.__init__()
             
     def crop_eisko(img):
         print("running crop_eisko")
