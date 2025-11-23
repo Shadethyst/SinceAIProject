@@ -53,8 +53,8 @@ class MainWindow(QMainWindow):
     @pyqtSlot()
     def show_completed_view(self):
 
-        processor = eisko_crop()
-        processor.callOnCreate(self.selectedItem)
+        
+        eisko_crop.callOnContinue(self.selectedItem)
         excel_button = QPushButton("Save Excel File")
         excel_button.setFixedSize(120, 40)
 

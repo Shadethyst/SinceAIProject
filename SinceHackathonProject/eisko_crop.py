@@ -89,7 +89,7 @@ class eisko_crop():
         return cropped_image
 
 
-    def callOnCreate(self, path):
+    def callOnContinue(path):
         # The path to PDF file:
         print("running callOnCreate")
         pdf_file_path = path
@@ -99,4 +99,4 @@ class eisko_crop():
             images[i].save('page'+ str(i) +'.jpg', 'JPEG')
 
         img = Image.open(str(f"page{1}.jpg"))
-        cropped = self.crop_eisko(img)
+        cropped = eisko_crop.crop_eisko(img)
