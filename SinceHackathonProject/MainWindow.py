@@ -6,7 +6,7 @@ import re
 import os
 import winreg
 import DragDropArea
-import create_excel
+from create_excel import create_excel
 from eisko_crop import eisko_crop
 from eisko_extract import eisko_extract
 

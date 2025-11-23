@@ -96,9 +96,10 @@ class eisko_crop():
         pdf_file_path = path
         images = convert_from_path(pdf_file_path)
         croppedimgs = []
+
         for i in range(len(images) - 1):
             # Save pages as images in the pdf
-            images[i].save('page'+ str(i) +'.jpg', 'JPEG')
+            images[i + 1].save('page'+ str(i + 1) +'.jpg', 'JPEG')
             img = Image.open(str(f"page{i + 1}.jpg"))
             print(f"Cropping page {i + 1}")
             cropped = eisko_crop.crop_eisko(img)
