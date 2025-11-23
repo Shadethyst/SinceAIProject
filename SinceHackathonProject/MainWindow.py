@@ -1,6 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow, QPushButton, QFileDialog, QVBoxLayout, QLabel
-from PyQt6.QtCore import pyqtSlot, QUrl, Qt, QTimer
+from PyQt6.QtCore import pyqtSlot, QUrl, Qt, QTimer, pyqtSignal
 from PyQt6.QtCore import QStandardPaths
 import re
 import os
@@ -49,6 +49,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(itemWidget)
         self.startWidget = itemWidget
 
+    @pyqtSlot
     def show_completed_view(self):
 
         self.onContinue.emit(self.selectedItem)
@@ -92,27 +93,13 @@ class MainWindow(QMainWindow):
             
     @pyqtSlot()
     def open_dialog(self):
-        #fname = QFileDialog.getOpenFileName(
-        #    self,
-        #    "Open File",
-        #    "${HOME}",
-        #    "PDF Files(*.pdf);; All Files(*)",
-        #    )
-        #reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders")
-        
-        #downloads_path = winreg.QueryValueEx(reg_key, "{374DE290-123F-4565-9164-39C4925E467B}")[0]
-        
-        #winreg.CloseKey(reg_key)      
         workingdirectory = os.getcwd()
         fUrl = QFileDialog.getOpenFileUrl(
             self,
             "Select File",
-            #QUrl(downloads_path),
             QUrl(workingdirectory),
             "PDF Files(*.pdf);; All Files(*)",
             )
-#        print(fname)
-        #print(downloads_path)
         print(fUrl[0].toString())
         
         if fUrl[0].toString().endswith(".pdf"):
