@@ -23,6 +23,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DragDropArea.py" />
+    <Compile Include="eisko_crop.py" />
+    <Compile Include="eisko_extract.py" />
     <Compile Include="MainWindow.py" />
     <Compile Include="SinceHackathonProject.py" />
     <Compile Include="TemplateMatch.py" />

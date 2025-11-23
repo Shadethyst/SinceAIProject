@@ -7,6 +7,7 @@ import os
 import winreg
 import DragDropArea
 import create_excel
+import eisko_crop
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -52,7 +53,8 @@ class MainWindow(QMainWindow):
     @pyqtSlot
     def show_completed_view(self):
 
-        self.onContinue.emit(self.selectedItem)
+        processor = eisko_crop()
+        processor.callOnCreate(self.selectedItem)
         excel_button = QPushButton("Save Excel File")
         excel_button.setFixedSize(120, 40)
 
