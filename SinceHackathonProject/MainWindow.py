@@ -50,7 +50,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(itemWidget)
         self.startWidget = itemWidget
 
-    @pyqtSlot
+    @pyqtSlot()
     def show_completed_view(self):
 
         processor = eisko_crop()
