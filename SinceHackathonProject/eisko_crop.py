@@ -12,6 +12,7 @@ class eisko_crop():
     def __init__(self):
         pass
 
+    #currently assumes that the images are in vertical orientation - horizontal results in OOB error
     def crop_eisko(img):
         print("running crop_eisko")
         # Convert PIL Image to NumPy array for OpenCV operations.
@@ -102,3 +103,5 @@ class eisko_crop():
 
         img = Image.open(str(f"page{1}.jpg"))
         cropped = eisko_crop.crop_eisko(img)
+
+    #move rest of clustering functions from eisko_extract
